@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PIPTR | 4th Semester Examination Result</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== TOP INFO BAR ===================== -->
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <span>Parul University Campus, Vadodara, Gujarat, India</span>
+    <span>Examination Cell | result@piptr.edu.in</span>
+  </div>
+</div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo-block">
+      <div class="logo-placeholder" aria-label="University Logo">LOGO</div>
+    </div>
+    <div class="header-text">
+      <h1>PIPTR</h1>
+      <p class="full-name">Parul Institute of Physiotherapy and Research</p>
+      <p class="affiliation">Constituent Institute of Parul University</p>
+    </div>
+    <div class="header-badge">
+      <span>Est. Excellence in Physiotherapy Education</span>
+    </div>
+  </div>
+  <div class="header-strip"></div>
+</header>
+
+<!-- ===================== TITLE BAND ===================== -->
+<section class="title-band">
+  <h2>4th Semester Examination Result</h2>
+  <p class="result-date">Result Declared on: <strong>15/07/2026</strong></p>
+</section>
+
+<!-- ===================== MAIN CONTAINER ===================== -->
+<main class="container">
+
+  <!-- SEARCH PANEL -->
+  <section class="search-panel" id="searchPanel">
+    <h3>Check Your Result</h3>
+    <p class="search-sub">Enter your Enrollment Number exactly as printed on your admit card.</p>
+    <form id="searchForm" autocomplete="off">
+      <div class="search-row">
+        <label for="enrollmentInput">Enrollment Number</label>
+        <input type="text" id="enrollmentInput" name="enrollment" placeholder="e.g. 2407511020078" required>
+        <button type="submit" class="btn btn-primary">Search Result</button>
+      </div>
+      <p class="error-msg" id="errorMsg"></p>
+      <p class="hint">Sample record for demo: <button type="button" class="link-btn" id="fillSample">2407511020078</button></p>
+    </form>
+  </section>
+
+  <!-- RESULT PANEL -->
+  <section class="result-panel" id="resultPanel" hidden>
+
+    <!-- Action bar -->
+    <div class="action-bar">
+      <button class="btn btn-outline" id="printBtn">🖨️ Print Result</button>
+      <button class="btn btn-outline" id="downloadBtn">⬇️ Download PDF</button>
+      <button class="btn btn-ghost" id="newSearchBtn">🔎 New Search</button>
+    </div>
+
+    <!-- Printable card -->
+    <article class="result-card" id="printArea">
+
+      <div class="card-header">
+        <div class="card-logo-placeholder">LOGO</div>
+        <div class="card-header-text">
+          <h3>Parul Institute of Physiotherapy and Research</h3>
+          <p>Constituent Institute of Parul University, Vadodara, Gujarat</p>
+          <p class="card-title-line">Statement of Marks &mdash; 4th Semester Examination</p>
+        </div>
+        <div class="card-photo-placeholder" aria-label="Student Photo">
+          <span>Student<br>Photo</span>
+        </div>
+      </div>
+
+      <div class="card-divider"></div>
+
+      <div class="student-details">
+        <div class="detail-item">
+          <span class="detail-label">Enrollment Number</span>
+          <span class="detail-value" id="outEnrollment">2407511020078</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Student Name</span>
+          <span class="detail-value" id="outName">Salekar Sakshi Santosh</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Course</span>
+          <span class="detail-value" id="outCourse">Bachelor of Physiotherapy</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Semester</span>
+          <span class="detail-value" id="outSemester">4th Semester</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Result Declared On</span>
+          <span class="detail-value">15/07/2026</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Result Status</span>
+          <span class="detail-value status-pass" id="outStatus">PASS</span>
+        </div>
+      </div>
+
+      <div class="card-divider"></div>
+
+      <h4 class="marks-heading">Subject-wise Marks</h4>
+      <div class="table-wrap">
+        <table class="marks-table" id="marksTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Subject</th>
+              <th>Marks Obtained</th>
+              <th>Max Marks</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- rows injected by script.js -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="summary-block">
+        <div class="summary-item">
+          <span class="summary-label">Total Marks Obtained</span>
+          <span class="summary-value" id="outTotal">256 / 360</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-label">Percentage</span>
+          <span class="summary-value" id="outPercentage">71.56%</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-label">Final Result</span>
+          <span class="summary-value status-pass" id="outFinalResult">PASS</span>
+        </div>
+      </div>
+
+      <div class="card-divider"></div>
+
+      <div class="card-footer">
+        <div class="qr-block">
+          <div class="qr-placeholder" aria-label="QR Code for verification">QR</div>
+          <p>Scan to verify online</p>
+        </div>
+        <div class="signature-block">
+          <div class="signature-line"></div>
+          <p>Controller of Examinations</p>
+          <p class="sub-sign">PIPTR, Parul University</p>
+        </div>
+      </div>
+
+      <p class="disclaimer">
+        This is a Computer Generated Provisional Result and does not require a physical signature.
+        In case of any discrepancy, please contact the Examination Cell within 7 days of declaration.
+        Original mark sheet issued by the University shall be treated as final.
+      </p>
+    </article>
+  </section>
+
+</main>
+
+<!-- ===================== SITE FOOTER ===================== -->
+<footer class="site-footer">
+  <p>&copy; 2026 Parul Institute of Physiotherapy and Research (PIPTR), Parul University. All Rights Reserved.</p>
+  <p class="footer-note">This portal displays a Computer Generated Provisional Result for reference purposes only.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
